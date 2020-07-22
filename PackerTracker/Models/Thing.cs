@@ -7,13 +7,13 @@ namespace PackerTracker.Models
   {
     public string Name { get; set;}
     public int Id { get; }
-    private static Dictionary<string, string> _instances = new Dictionary<string, string>() { {"name", ""}, {"weight", ""} , {"manufacturer", ""} , {"packed", ""} , {"purchased", ""} };
+    public static Dictionary<string, string> Instances = new Dictionary<string, string>() { {"name", ""}, {"weight", ""} , {"manufacturer", ""} , {"packed", ""} , {"purchased", ""} } {get; set;}
     
     
     public Thing(string name)
     {
       Name = name;
-      _instances.Add(this);
+      // _instances.Add(this);
       Id = _instances.Count;
     }
     public Thing(string weight, string manufacturer, string packed, string purchased)

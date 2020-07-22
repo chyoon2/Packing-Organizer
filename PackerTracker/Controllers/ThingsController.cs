@@ -23,7 +23,7 @@ namespace PackerTracker.Controllers
     [HttpPost("/things")]
     public ActionResult Create(string inputName, string inputWeight, string inputManufacturer, string inputPacked, string inputPurchase)
     {
-      Thing myThing = new Thing();
+      Thing myThing = new Thing(inputName);
       return RedirectToAction("Index");
     }
 
